@@ -7,16 +7,18 @@ const PatikaStore = () => {
   const [text, setText] = React.useState("");
   console.log(Products);
   return (
-    <SafeAreaView>
+    <SafeAreaView >
       <View style={styles.container}>
         <Text style={styles.mainText}>PATİKASTORE</Text>
         <TextInput style={styles.input} value={text} onChangeText={setText} placeholder="Ara..."/>
       </View>
-      <FlatList data={Products} keyExtractor={(item) => item.id.toString()} horizontal={false} numColumns={2} 
-      renderItem={({ item }) => (
-      <Product item={item}/>
-      
-      )}/>
+      <View style={styles.container}>
+        <FlatList data={Products} keyExtractor={(item) => item.id.toString()} horizontal={false} numColumns={2} 
+        renderItem={({ item }) => (
+        <Product item={item}/>
+        )}/>
+      </View>
+
       
 
     </SafeAreaView>
