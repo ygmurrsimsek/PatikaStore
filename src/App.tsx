@@ -12,7 +12,7 @@ const PatikaStore = () => {
         <Text style={styles.mainText}>PATİKASTORE</Text>
         <TextInput style={styles.input} value={text} onChangeText={setText} placeholder="Ara..."/>
       </View>
-      <FlatList data={Products} keyExtractor={(item) => item.id.toString()}
+      <FlatList data={Products} keyExtractor={(item) => item.id.toString()} horizontal={false} numColumns={2} 
       renderItem={({ item }) => (
       <Product item={item}/>
       
